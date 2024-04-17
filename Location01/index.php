@@ -3,7 +3,7 @@
 //print_r($_POST);
 session_start();
 
-$flag = "FLAG2\${6.23424345435,80.2343534543}";
+$flag = "{flag2}\${6.23424345435,80.2343534543}";
 $cookieName = 'cookie';
 
 
@@ -6182,7 +6182,7 @@ before: function() {
         }
     } );
 },
-//FLAG0${fristflag}
+//{flag0}${fristflag}
 
 after: function() {
     return domManip( this, arguments, function( elem ) {
