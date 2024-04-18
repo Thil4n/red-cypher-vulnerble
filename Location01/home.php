@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="static/favicon.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-BUH0YD02w8g2JMnOuB5/G3J5+R+3SAe04uHNkDOzCC9B/GHQj5rnzCnpPZVAedvTOZJACcY5NW/5ojd1ZGxy2Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -156,10 +158,22 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">Dashboard</h1>
             <div>
-                <button class="bg-gray-800 text-white py-2 px-4 rounded-lg mr-4">Download</button>
+            <button class="bg-gray-800 text-white py-2 px-4 rounded-lg mt-2" onclick="downloadAudio()">Download</button>
                 <button class="bg-gray-800 text-white py-2 px-4 rounded-lg">About</button>
             </div>
         </div>
+        <script>
+    // Function to trigger the download action
+    function downloadAudio() {
+        // Create a dummy link element
+        var link = document.createElement('a');
+        link.href = 'static/Audio'; 
+        link.download = 'fourier'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
     </nav>
 
     <!-- Main Content -->
@@ -263,7 +277,20 @@
                 <h2 class="card-title text-xl font-semibold mb-2">Download </h2>
                 <div class="text-sm text-gray-300">
                     <p>Click below to download images:</p>
-                    <button class="bg-gray-800 text-white py-2 px-4 rounded-lg mt-2">Download</button>
+                    <button class="bg-gray-800 text-white py-2 px-4 rounded-lg mt-2" onclick="downloadImage()">Download</button>
+                    <script>
+    // Function to trigger the download action
+    function downloadImage() {
+        // Create a dummy link element
+        var link = document.createElement('a');
+        link.href = 'static/output.jpg'; // Replace 'image.jpg' with the actual filename and path relative to the 'static' folder
+        link.download = 'image.jpg'; // You can specify the filename for the downloaded image
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
                 </div>
             </div>
 
@@ -331,7 +358,7 @@
                 <div class="text-sm text-gray-300">
                     <p>This dashboard is designed for hackers to monitor network activity, system logs, and security
                         alerts.</p>
-                    <p>It provides access to secret details and instructions for secure communication.</p>
+                    <p></p>
                 </div>
             </div>
 
@@ -341,7 +368,7 @@
     <!-- Footer -->
     <footer class="footer py-4">
         <div class="container mx-auto text-center">
-            <p class="text-gray-400">© 2024 Dashboard. All rights reserved.</p>
+            <p class="text-gray-400">© 2024 {flag3}${}. All rights reserved.</p>
         </div>
     </footer>
 

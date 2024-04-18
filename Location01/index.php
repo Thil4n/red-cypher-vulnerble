@@ -3,7 +3,7 @@
 //print_r($_POST);
 session_start();
 
-$flag = "{flag2}\${6.23424345435,80.2343534543}";
+$flag = "{flag4}\${6.23424345435,80.2343534543}";
 $cookieName = 'cookie';
 
 
